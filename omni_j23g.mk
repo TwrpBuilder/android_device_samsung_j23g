@@ -18,5 +18,5 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base.mk)
 PRODUCT_DEVICE := j23g
 PRODUCT_NAME := omni_j23g
 PRODUCT_BRAND := samsung
-PRODUCT_MODEL := sm-j200h
+PRODUCT_MODEL := SM-J200H
 PRODUCT_MANUFACTURER := samsung
