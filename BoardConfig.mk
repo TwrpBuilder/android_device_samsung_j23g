@@ -34,6 +34,7 @@ TW_EXCLUDE_SUPERSU := true
 TW_INPUT_BLACKLIST := "hbtp_vm"
 include $(LOCAL_PATH)/kernel.mk
 include device/generic/twrpbuilder/BoardConfig32.mk
+BOARD_CUSTOM_BOOTIMG_MK := device/generic/twrpbuilder/seEnforcing.mk
 
 TW_NO_REBOOT_BOOTLOADER := true
 RECOVERY_SDCARD_ON_DATA := true
