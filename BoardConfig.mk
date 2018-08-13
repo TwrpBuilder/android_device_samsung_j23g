@@ -16,27 +16,36 @@
 
 LOCAL_PATH := device/samsung/j23g
 
+# Platform
 TARGET_BOARD_PLATFORM := sc8830
-TARGET_BOOTLOADER_BOARD_NAME := j23g
+BOARD_VENDOR := samsung
 
-# Recovery
+# Architecture
+TARGET_ARCH := arm
+TARGET_ARCH_VARIANT := armv7-a-neon
+TARGET_CPU_ABI := armeabi-v7a
+TARGET_CPU_ABI2 := armeabi
+TARGET_CPU_VARIANT := cortex-a7
+TARGET_CPU_SMP := true
+
+# File system
 TARGET_USERIMAGES_USE_EXT4 := true
 BOARD_RECOVERYIMAGE_PARTITION_SIZE := 15996944
 BOARD_FLASH_BLOCK_SIZE := 0
-BOARD_HAS_NO_REAL_SDCARD := true
-BOARD_HAS_NO_SELECT_BUTTON := true
-BOARD_SUPPRESS_SECURE_ERASE := true
 BOARD_HAS_NO_MISC_PARTITION := true
-BOARD_RECOVERY_SWIPE := true
-BOARD_USES_MMCUTILS := true
-BOARD_SUPPRESS_EMMC_WIPE := true
-TW_EXCLUDE_SUPERSU := true
-TW_INPUT_BLACKLIST := "hbtp_vm"
-include $(LOCAL_PATH)/kernel.mk
-include device/generic/twrpbuilder/BoardConfig32.mk
-BOARD_CUSTOM_BOOTIMG_MK := device/generic/twrpbuilder/seEnforcing.mk
+BOARD_HAS_NO_REAL_SDCARD := true
 
-TW_NO_REBOOT_BOOTLOADER := true
+# Recovery
 RECOVERY_SDCARD_ON_DATA := true
+RECOVERY_GRAPHICS_USE_LINELENGTH := true
+TW_INPUT_BLACKLIST := "hbtp_vm"
+TW_NO_REBOOT_BOOTLOADER := true
+TW_HAS_DOWNLOAD_MODE := true
+TW_NEW_ION_HEAP := true
+TW_THEME := portrait_mdpi
+TW_MAX_BRIGHTNESS := 255
+TW_BRIGHTNESS_PATH := '/sys/devices/gen-panel-backlight.29/backlight/panel/brightness'
 TARGET_RECOVERY_PIXEL_FORMAT := "BGRA_8888"
 
+BOARD_CUSTOM_BOOTIMG_MK := device/generic/twrpbuilder/seEnforcing.mk
+include $(LOCAL_PATH)/kernel.mk
