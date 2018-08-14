@@ -38,14 +38,14 @@ BOARD_HAS_NO_REAL_SDCARD := true
 # Recovery
 RECOVERY_SDCARD_ON_DATA := true
 RECOVERY_GRAPHICS_USE_LINELENGTH := true
+TW_NO_CPU_TEMP := true
 TW_INPUT_BLACKLIST := "hbtp_vm"
 TW_NO_REBOOT_BOOTLOADER := true
 TW_HAS_DOWNLOAD_MODE := true
 TW_NEW_ION_HEAP := true
 TW_THEME := portrait_mdpi
 TW_MAX_BRIGHTNESS := 255
-TW_BRIGHTNESS_PATH := '/sys/devices/gen-panel-backlight.29/backlight/panel/brightness'
-TARGET_RECOVERY_PIXEL_FORMAT := "BGRA_8888"
+TARGET_RECOVERY_PIXEL_FORMAT := "RGBX_8888"
 
 BOARD_CUSTOM_BOOTIMG_MK := device/generic/twrpbuilder/seEnforcing.mk
 include $(LOCAL_PATH)/kernel.mk
