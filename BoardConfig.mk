@@ -45,7 +45,7 @@ TW_NEW_ION_HEAP := true
 TW_THEME := portrait_mdpi
 TW_MAX_BRIGHTNESS := 255
 TW_BRIGHTNESS_PATH := '/sys/devices/gen-panel-backlight.29/backlight/panel/brightness'
-TARGET_RECOVERY_PIXEL_FORMAT := "BGRA_8888"
+TARGET_RECOVERY_PIXEL_FORMAT := "ABGR_8888"
 
 BOARD_CUSTOM_BOOTIMG_MK := device/generic/twrpbuilder/seEnforcing.mk
 include $(LOCAL_PATH)/kernel.mk
